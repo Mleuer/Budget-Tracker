@@ -17,8 +17,10 @@ class App extends React.Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
+    console.log(event);
+
     let expenseArr = this.state.expenses;
-    expenseArr.push(event.target.value);
+    expenseArr.push(this.state.amount);
 
     this.setState({...this.state, expenses: expenseArr})
   };
@@ -28,7 +30,7 @@ class App extends React.Component {
       <div className="container">
         <Jumbotron/>
         <Form handleInputChange={this.handleInputChange} handleFormSubmit={this.handleFormSubmit}/>
-        <Table/>
+        <Table expenses={this.state.expenses}/>
       </div>
     );
   }

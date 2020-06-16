@@ -8,12 +8,11 @@ function Table(props) {
           <tr>
             <th>Expenses</th>
           </tr>
-          <tr>
-            <td>5000</td>
-          </tr>
-          <tr>
-            <td>7000</td>
-          </tr>
+          {props.expenses.forEach((expense) => (
+            <tr>
+              <td>{expense}</td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </>
