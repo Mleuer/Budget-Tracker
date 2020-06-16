@@ -4,9 +4,9 @@ function Form() {
   return (
     <>
       <form>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Input Your Expense</label>
-          <input type="text" className="form-control"></input>
+        <div className="form-group">
+          <label>Input Your Expense:</label>
+          <input type="text" className="form-control" placeholder="$"></input>
         </div>
         <button type="submit" className="btn btn-primary">
           Submit
