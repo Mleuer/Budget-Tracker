@@ -8,7 +8,8 @@ class App extends React.Component {
 
   state = {
     expenses: [],
-    amount: 0
+    amount: "",
+    total: 0
   }
 
   handleInputChange = event => {
@@ -17,12 +18,14 @@ class App extends React.Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    console.log(event);
 
     let expenseArr = this.state.expenses;
-    expenseArr.push(this.state.amount);
+    let floatAmount = parseFloat(this.state.amount);
 
-    this.setState({...this.state, expenses: expenseArr})
+    expenseArr.push(floatAmount);
+    console.log(floatAmount, this.state.total);
+
+    this.setState({...this.state, expenses: expenseArr, total: this.state.total + floatAmount})
   };
 
   render() {
@@ -30,7 +33,7 @@ class App extends React.Component {
       <div className="container">
         <Jumbotron/>
         <Form handleInputChange={this.handleInputChange} handleFormSubmit={this.handleFormSubmit}/>
-        <Table expenses={this.state.expenses}/>
+        <Table expenses={this.state.expenses} total={this.state.total}/>
       </div>
     );
   }
