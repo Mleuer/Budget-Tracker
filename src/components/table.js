@@ -6,9 +6,15 @@ function Table(props) {
     return "$" + expense + ".00";
   }
 
+  const tableStyle = {
+    width: "25%",
+    border: "1",
+    marginTop: "15px"
+  }
+
   return (
     <>
-      <table border="1">
+      <table border={tableStyle.border} style={tableStyle}>
         <thead>
           <tr>
             <th>Expenses</th>
