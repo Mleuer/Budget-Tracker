@@ -5,6 +5,11 @@ function Table(props) {
   const formatExpense = (expense) => {
     return "$" + expense + ".00";
   }
+  const tableStyle = {
+    width: "25%",
+    border: "1",
+    marginTop: "15px"
+  }
 
   const tableStyle = {
     width: "25%",
