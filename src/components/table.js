@@ -11,6 +11,12 @@ function Table(props) {
     marginTop: "15px"
   }
 
+  const tableStyle = {
+    width: "25%",
+    border: "1",
+    marginTop: "15px"
+  }
+
   return (
     <>
       <table border={tableStyle.border} style={tableStyle}>
