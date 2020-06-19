@@ -9,7 +9,7 @@ function Form(props) {
           <input type="text" className="form-control" onChange={props.handleInputChange} placeholder="$"></input>
         </div>
         <button type="submit" className="btn btn-primary">
-          Submit
+          Submit change
         </button>
       </form>
     </>
